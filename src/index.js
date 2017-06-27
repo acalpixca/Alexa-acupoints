@@ -99,13 +99,13 @@ var languageStrings = {
     "en-US": {
         "translation": {
             "RECIPES" : recipes.RECIPE_EN_US,
-            "SKILL_NAME" : "American Acupoints"
+            "SKILL_NAME" : "Acupoints"
         }
     },
     "en-GB": {
         "translation": {
             "RECIPES": recipes.RECIPE_EN_GB,
-            "SKILL_NAME": "British Acupoints"
+            "SKILL_NAME": "Acupoints"
         }
     },
     "de": {
