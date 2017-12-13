@@ -37,7 +37,9 @@ var handlers = {
         if (recipe) {
             this.attributes['speechOutput'] = recipe;
             this.attributes['repromptSpeech'] = this.t("RECIPE_REPEAT_MESSAGE");
-			this.emit(':tellWithCard', cardTitle, cardTitle, recipe, recipe);
+			// this.emit(':tellWithCard', cardTitle, cardTitle, recipe, recipe);
+			// EL ORDEN DEBERIA SER speechOutput, cardTitle, cardContent, imageObj
+			this.emit(':tellWithCard', recipe, cardTitle, recipe, recipe);
         } else {
             var speechOutput = this.t("RECIPE_NOT_FOUND_MESSAGE");
             var repromptSpeech = this.t("RECIPE_NOT_FOUND_REPROMPT");
