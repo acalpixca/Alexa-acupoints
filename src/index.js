@@ -2,7 +2,7 @@
 
 var Alexa = require('alexa-sdk');
 var APP_ID = 'amzn1.ask.skill.3ac95fba-aa3d-412a-a1e9-8bd1707a512d';// undefined; // TODO replace with your app ID (OPTIONAL).
-var recipes = require('./recipes');
+var acupoints = require('./acupoints');
 var imagenes = require('./imagenes');
 
 exports.handler = function(event, context, callback) {
@@ -32,13 +32,13 @@ var handlers = {
         }
 
         var cardTitle = this.t("DISPLAY_CARD_TITLE", this.t("SKILL_NAME"), itemName);
-        var recipes = this.t("RECIPES");
+        var acupoints = this.t("ACUPOINTS");
 		var imagenes = this.t("IMAGENES");
-        var recipe = recipes[itemName];
+        var acupoint = acupoints[itemName];
 		var imagen = imagenes[itemName];
-        if (recipe) {
-            this.attributes['speechOutput'] = recipe;
-            this.attributes['repromptSpeech'] = this.t("RECIPE_REPEAT_MESSAGE");
+        if (acupoint) {
+            this.attributes['speechOutput'] = acupoint;
+            this.attributes['repromptSpeech'] = this.t("ACUPOINT_REPEAT_MESSAGE");
 			// this.emit(':tellWithCard', cardTitle, cardTitle, recipe, recipe);
 			// EL ORDEN DEBERIA SER speechOutput, cardTitle, cardContent, imageObj
 			/* var imagen = {
@@ -49,14 +49,14 @@ var handlers = {
 				"smallImageUrl": "https://s3.amazonaws.com/alexaimageseva/acupoints-media/smallImageTest.png",
 				"largeImageUrl": "https://s3.amazonaws.com/alexaimageseva/acupoints-media/largeImageTest.png"
 				};*/
-			this.emit(':tellWithCard', recipe, cardTitle, recipe, imagen);
+			this.emit(':tellWithCard', acupoint, cardTitle, acupoint, imagen);
         } else {
-            var speechOutput = this.t("RECIPE_NOT_FOUND_MESSAGE");
-            var repromptSpeech = this.t("RECIPE_NOT_FOUND_REPROMPT");
+            var speechOutput = this.t("ACUPOINT_NOT_FOUND_MESSAGE");
+            var repromptSpeech = this.t("ACUPOINT_NOT_FOUND_REPROMPT");
             if (itemName) {
-                speechOutput += this.t("RECIPE_NOT_FOUND_WITH_ITEM_NAME", itemName);
+                speechOutput += this.t("ACUPOINT_NOT_FOUND_WITH_ITEM_NAME", itemName);
             } else {
-                speechOutput += this.t("RECIPE_NOT_FOUND_WITHOUT_ITEM_NAME");
+                speechOutput += this.t("ACUPOINT_NOT_FOUND_WITHOUT_ITEM_NAME");
             }
             speechOutput += repromptSpeech;
 
@@ -93,7 +93,7 @@ var handlers = {
 var languageStrings = {
     "en": {
         "translation": {
-            "RECIPES": recipes.RECIPE_EN_US,
+            "ACUPOINTS": acupoints.ACUPOINT_EN_US,
 			"IMAGENES" : imagenes.IMAGEN_EN_US,
             "SKILL_NAME": "Acupuncture Points",
             "WELCOME_MESSAGE": "Welcome to %s. I can help you locate acupuncture points. Ask, where\'s Kidney One? ... Now, what can I help you with.",
@@ -102,30 +102,30 @@ var languageStrings = {
             "HELP_MESSAGE": "You can ask questions such as, where\'s Kidney One, or, you can say exit...Now, what can I help you with?",
             "HELP_REPROMPT": "You can say things like, where\'s Kidney One, or you can say exit...Now, what can I help you with?",
             "STOP_MESSAGE": "Goodbye!",
-            "RECIPE_REPEAT_MESSAGE": "Try saying repeat.",
-            "RECIPE_NOT_FOUND_MESSAGE": "I\'m sorry, I currently do not know ",
-            "RECIPE_NOT_FOUND_WITH_ITEM_NAME": "where to locate %s. ",
-            "RECIPE_NOT_FOUND_WITHOUT_ITEM_NAME": "that. ",
-            "RECIPE_NOT_FOUND_REPROMPT": "What else can I help with?"
+            "ACUPOINT_REPEAT_MESSAGE": "Try saying repeat.",
+            "ACUPOINT_NOT_FOUND_MESSAGE": "I\'m sorry, I currently do not know ",
+            "ACUPOINT_NOT_FOUND_WITH_ITEM_NAME": "where to locate %s. ",
+            "ACUPOINT_NOT_FOUND_WITHOUT_ITEM_NAME": "that. ",
+            "ACUPOINT_NOT_FOUND_REPROMPT": "What else can I help with?"
         }
     },
     "en-US": {
         "translation": {
-            "RECIPES" : recipes.RECIPE_EN_US,
+            "ACUPOINTS" : acupoints.ACUPOINT_EN_US,
 			"IMAGENES"  : imagenes.IMAGEN_EN_US,
             "SKILL_NAME" : "Acupuncture Points"
         }
     },
     "en-GB": {
         "translation": {
-            "RECIPES": recipes.RECIPE_EN_GB,
+            "ACUPOINTS": acupoints.ACUPOINT_EN_GB,
 			"IMAGENES": imagenes.IMAGEN_EN_GB,
             "SKILL_NAME": "Acupuncture Points"
         }
     },
     "de": {
         "translation": {
-            "RECIPES" : recipes.RECIPE_DE_DE,
+            "ACUPOINTS" : acupoints.ACUPOINT_DE_DE,
 			"IMAGENES": imagenes.IMAGEN_DE_DE,
             "SKILL_NAME" : "Acupuncture Points",
             "WELCOME_MESSAGE": "Willkommen bei %s. Du kannst beispielsweise die Frage stellen: Welche Rezepte gibt es für eine Truhe? ... Nun, womit kann ich dir helfen?",
@@ -134,11 +134,11 @@ var languageStrings = {
             "HELP_MESSAGE": "Du kannst beispielsweise Fragen stellen wie „Wie geht das Rezept für“ oder du kannst „Beenden“ sagen ... Wie kann ich dir helfen?",
             "HELP_REPROMPT": "Du kannst beispielsweise Sachen sagen wie „Wie geht das Rezept für“ oder du kannst „Beenden“ sagen ... Wie kann ich dir helfen?",
             "STOP_MESSAGE": "Auf Wiedersehen!",
-            "RECIPE_REPEAT_MESSAGE": "Sage einfach „Wiederholen“.",
-            "RECIPE_NOT_FOUND_MESSAGE": "Tut mir leid, ich kenne derzeit ",
-            "RECIPE_NOT_FOUND_WITH_ITEM_NAME": "das Rezept für %s nicht. ",
-            "RECIPE_NOT_FOUND_WITHOUT_ITEM_NAME": "dieses Rezept nicht. ",
-            "RECIPE_NOT_FOUND_REPROMPT": "Womit kann ich dir sonst helfen?"
+            "ACUPOINT_REPEAT_MESSAGE": "Sage einfach „Wiederholen“.",
+            "ACUPOINT_NOT_FOUND_MESSAGE": "Tut mir leid, ich kenne derzeit ",
+            "ACUPOINT_NOT_FOUND_WITH_ITEM_NAME": "das Rezept für %s nicht. ",
+            "ACUPOINT_NOT_FOUND_WITHOUT_ITEM_NAME": "dieses Rezept nicht. ",
+            "ACUPOINT_NOT_FOUND_REPROMPT": "Womit kann ich dir sonst helfen?"
         }
     }
 };
