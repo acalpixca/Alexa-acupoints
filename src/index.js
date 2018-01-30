@@ -24,7 +24,7 @@ var handlers = {
         this.attributes['repromptSpeech'] = this.t("WELCOME_REPROMPT");
         this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
     },
-    'RecipeIntent': function () {
+    'AcupointLocationIntent': function () {
         var itemSlot = this.event.request.intent.slots.Item;
         var itemName;
         if (itemSlot && itemSlot.value) {
