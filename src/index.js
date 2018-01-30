@@ -3,6 +3,7 @@
 var Alexa = require('alexa-sdk');
 var APP_ID = 'amzn1.ask.skill.3ac95fba-aa3d-412a-a1e9-8bd1707a512d';// undefined; // TODO replace with your app ID (OPTIONAL).
 var recipes = require('./recipes');
+var imagenes = require('./imagenes');
 
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
@@ -32,17 +33,22 @@ var handlers = {
 
         var cardTitle = this.t("DISPLAY_CARD_TITLE", this.t("SKILL_NAME"), itemName);
         var recipes = this.t("RECIPES");
+		var imagenes = this.t("IMAGENES");
         var recipe = recipes[itemName];
-
+		var imagen = imagenes[itemName];
         if (recipe) {
             this.attributes['speechOutput'] = recipe;
             this.attributes['repromptSpeech'] = this.t("RECIPE_REPEAT_MESSAGE");
 			// this.emit(':tellWithCard', cardTitle, cardTitle, recipe, recipe);
 			// EL ORDEN DEBERIA SER speechOutput, cardTitle, cardContent, imageObj
-			var imagen = {
+			/* var imagen = {
 				"smallImageUrl": "https://s3.amazonaws.com/alexaimageseva/acupoints-media/smallImageTest.png",
 				"largeImageUrl": "https://s3.amazonaws.com/alexaimageseva/acupoints-media/largeImageTest.png"
-				};
+				};*/
+				/*imagen = {
+				"smallImageUrl": "https://s3.amazonaws.com/alexaimageseva/acupoints-media/smallImageTest.png",
+				"largeImageUrl": "https://s3.amazonaws.com/alexaimageseva/acupoints-media/largeImageTest.png"
+				};*/
 			this.emit(':tellWithCard', recipe, cardTitle, recipe, imagen);
         } else {
             var speechOutput = this.t("RECIPE_NOT_FOUND_MESSAGE");
@@ -88,6 +94,7 @@ var languageStrings = {
     "en": {
         "translation": {
             "RECIPES": recipes.RECIPE_EN_US,
+			"IMAGENES" : imagenes.IMAGEN_EN_US,
             "SKILL_NAME": "Acupuncture Points",
             "WELCOME_MESSAGE": "Welcome to %s. I can help you locate acupuncture points. Ask, where\'s Kidney One? ... Now, what can I help you with.",
             "WELCOME_REPROMPT": "For instructions on what you can say, please say help me.",
@@ -105,18 +112,21 @@ var languageStrings = {
     "en-US": {
         "translation": {
             "RECIPES" : recipes.RECIPE_EN_US,
+			"IMAGENES"  : imagenes.IMAGEN_EN_US,
             "SKILL_NAME" : "Acupuncture Points"
         }
     },
     "en-GB": {
         "translation": {
             "RECIPES": recipes.RECIPE_EN_GB,
+			"IMAGENES": imagenes.IMAGEN_EN_GB,
             "SKILL_NAME": "Acupuncture Points"
         }
     },
     "de": {
         "translation": {
             "RECIPES" : recipes.RECIPE_DE_DE,
+			"IMAGENES": imagenes.IMAGEN_DE_DE,
             "SKILL_NAME" : "Acupuncture Points",
             "WELCOME_MESSAGE": "Willkommen bei %s. Du kannst beispielsweise die Frage stellen: Welche Rezepte gibt es für eine Truhe? ... Nun, womit kann ich dir helfen?",
             "WELCOME_REPROMPT": "Wenn du wissen möchtest, was du sagen kannst, sag einfach „Hilf mir“.",
