@@ -3,7 +3,7 @@
 var Alexa = require('alexa-sdk');
 var APP_ID = 'amzn1.ask.skill.3ac95fba-aa3d-412a-a1e9-8bd1707a512d';// undefined; // TODO replace with your app ID (OPTIONAL).
 var acupoints = require('./acupoints');
-var imagenes = require('./imagenes');
+//var imagenes = require('./imagenes');
 
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
@@ -33,9 +33,9 @@ var handlers = {
 
         var cardTitle = this.t("DISPLAY_CARD_TITLE", this.t("SKILL_NAME"), itemName);
         var acupoints = this.t("ACUPOINTS");
-		var imagenes = this.t("IMAGENES");
-        var acupoint = acupoints[itemName];
-		var imagen = imagenes[itemName];
+		//var imagenes = this.t("IMAGENES");
+        var acupoint = acupoints[itemName].speech;
+		var imagen = acupoints[itemName].imagen;
         if (acupoint) {
             this.attributes['speechOutput'] = acupoint;
             this.attributes['repromptSpeech'] = this.t("ACUPOINT_REPEAT_MESSAGE");
@@ -94,7 +94,7 @@ var languageStrings = {
     "en": {
         "translation": {
             "ACUPOINTS": acupoints.ACUPOINT_EN_US,
-			"IMAGENES" : imagenes.IMAGEN_EN_US,
+			//"IMAGENES" : imagenes.IMAGEN_EN_US,
             "SKILL_NAME": "Acupuncture Points",
             "WELCOME_MESSAGE": "Welcome to %s. I can help you locate acupuncture points. Ask, where\'s Kidney One? ... Now, what can I help you with.",
             "WELCOME_REPROMPT": "For instructions on what you can say, please say help me.",
@@ -112,21 +112,21 @@ var languageStrings = {
     "en-US": {
         "translation": {
             "ACUPOINTS" : acupoints.ACUPOINT_EN_US,
-			"IMAGENES"  : imagenes.IMAGEN_EN_US,
+			//"IMAGENES"  : imagenes.IMAGEN_EN_US,
             "SKILL_NAME" : "Acupuncture Points"
         }
     },
     "en-GB": {
         "translation": {
             "ACUPOINTS": acupoints.ACUPOINT_EN_GB,
-			"IMAGENES": imagenes.IMAGEN_EN_GB,
+			//"IMAGENES": imagenes.IMAGEN_EN_GB,
             "SKILL_NAME": "Acupuncture Points"
         }
     },
     "de": {
         "translation": {
             "ACUPOINTS" : acupoints.ACUPOINT_DE_DE,
-			"IMAGENES": imagenes.IMAGEN_DE_DE,
+			//"IMAGENES": imagenes.IMAGEN_DE_DE,
             "SKILL_NAME" : "Acupuncture Points",
             "WELCOME_MESSAGE": "Willkommen bei %s. Du kannst beispielsweise die Frage stellen: Welche Rezepte gibt es für eine Truhe? ... Nun, womit kann ich dir helfen?",
             "WELCOME_REPROMPT": "Wenn du wissen möchtest, was du sagen kannst, sag einfach „Hilf mir“.",
