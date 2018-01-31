@@ -1,4 +1,4 @@
-AcupointLocationIntent where is {Item}
-AcupointLocationIntent how can i find {Item}
-AcupointLocationIntent how can i locate {Item}
-AcupointLocationIntent {Item}
+AcupointLocationIntent where is {Acupoint}
+AcupointLocationIntent how can i find {Acupoint}
+AcupointLocationIntent how can i locate {Acupoint}
+AcupointLocationIntent {Acupoint}

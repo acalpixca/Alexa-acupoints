@@ -24,7 +24,8 @@ var handlers = {
         this.emit(':ask', this.attributes['speechOutput'], this.attributes['repromptSpeech'])
     },
     'AcupointLocationIntent': function () {
-        var itemSlot = this.event.request.intent.slots.Item;
+        //var itemSlot = this.event.request.intent.slots.Item;
+		var itemSlot = this.event.request.intent.slots.Acupoint;
         var itemName;
         if (itemSlot && itemSlot.value) {
             itemName = itemSlot.value.toLowerCase();
@@ -32,8 +33,11 @@ var handlers = {
 
         var cardTitle = this.t("DISPLAY_CARD_TITLE", this.t("SKILL_NAME"), itemName);
         var acupoints = this.t("ACUPOINTS");
-        var acupoint = acupoints[itemName].speech;
-		var imagen = acupoints[itemName].imagen;
+		var acupoint;
+		if (acupoints[itemName]){
+			acupoint = acupoints[itemName].speech;
+			var imagen = acupoints[itemName].imagen;
+		}
         if (acupoint) {
             this.attributes['speechOutput'] = acupoint;
             this.attributes['repromptSpeech'] = this.t("ACUPOINT_REPEAT_MESSAGE");
@@ -56,6 +60,7 @@ var handlers = {
             this.attributes['speechOutput'] = speechOutput;
             this.attributes['repromptSpeech'] = repromptSpeech;
 
+			// speechOutput="Hey ho let's go! ";
             this.emit(':ask', speechOutput, repromptSpeech);
         }
     },
