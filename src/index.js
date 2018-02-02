@@ -46,7 +46,7 @@ var handlers = {
 				"smallImageUrl": "https://s3.amazonaws.com/alexaimageseva/acupoints-media/smallImageTest.png",
 				"largeImageUrl": "https://s3.amazonaws.com/alexaimageseva/acupoints-media/largeImageTest.png"
 				};*/
-			this.emit(':tellWithCard', acupoint, cardTitle, acupoint, imagen);
+			this.emit(':tellWithCard', acupoint, cardTitle, acupoint.replace("chun","cun"), imagen);
         } else {
             var speechOutput = this.t("ACUPOINT_NOT_FOUND_MESSAGE");
             var repromptSpeech = this.t("ACUPOINT_NOT_FOUND_REPROMPT");
