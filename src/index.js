@@ -134,5 +134,23 @@ var languageStrings = {
             "ACUPOINT_NOT_FOUND_WITHOUT_ITEM_NAME": "dieses Rezept nicht. ",
             "ACUPOINT_NOT_FOUND_REPROMPT": "Womit kann ich dir sonst helfen?"
         }
+    },
+
+    "es": {
+        "translation": {
+            "ACUPOINTS": acupoints.ACUPOINT_ES,
+            "SKILL_NAME": "Puntos de Acupuntura",
+            "WELCOME_MESSAGE": "Bienvenido a %s. Puedo ayudarte a encontrar la ubicación de algunos puntos de acupuntura. Puedes preguntarme: ¿dónde está Riñón uno? Cuando estés listo, puedes hacerme una pregunta.",
+            "WELCOME_REPROMPT": "Para obtener ideas sobre qué cosas puedes preguntarme, por favor di: ayuda.",
+            "DISPLAY_CARD_TITLE": "%s  - Ubicación de %s.",
+            "HELP_MESSAGE": "Puedes preguntarme: ¿dónde está Riñón uno?, o me puedes decir, sal... ¿En qué te puedo ayudar?",
+            "HELP_REPROMPT": "YPuedes preguntarme: ¿dónde está Riñón uno?, o me puedes decir, sal... ¿En qué te puedo ayudar?",
+            "STOP_MESSAGE": "¡Hasta pronto!",
+            "ACUPOINT_REPEAT_MESSAGE": "Prueba a pedirme que repita.",
+            "ACUPOINT_NOT_FOUND_MESSAGE": "Lo siento, no sé ",
+            "ACUPOINT_NOT_FOUND_WITH_ITEM_NAME": "dónde se encuentra el punto %s. ",
+            "ACUPOINT_NOT_FOUND_WITHOUT_ITEM_NAME": "dónde se encuentra.",
+            "ACUPOINT_NOT_FOUND_REPROMPT": "¿Te puedo ayudar con algo más?"
+        }
     }
 };

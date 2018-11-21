@@ -16,7 +16,7 @@ module.exports = {
 					"largeImageUrl": imagenPath + "largeImageTest.png"
 				}
 			},
-				
+
 			"large intestine 4":  {
 				"speech": "Between the thumb and the index finger",
 				"imagen": {
@@ -131,7 +131,7 @@ module.exports = {
 					"largeImageUrl": imagenPath + "largeImageTest.png"
 				}
 			},
-				
+
 			"large intestine 4":  {
 				"speech": "Between the thumb and the index finger",
 				"imagen": {
@@ -231,6 +231,124 @@ module.exports = {
 				}
 			}
     },
+
+    "ACUPOINT_ES" : {
+      "riñón 1": {
+        "speech": "En el centro del metatarso, en la planta del pie.",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "estómago 36": {
+        "speech": "En la parte delantera de la pierna, entre la tibia y el peroné, unos dos chun por debajo del borde inferior de la rótula.",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+
+      "intestino grueso 4":  {
+        "speech": "Entre el dedo gordo y el dedo índice",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vejiga 4": {
+        "speech": "entre la segunda y la tercera vértebra lumbar",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "intestino grueso 11": {
+        "speech": "en el lado externo del codo",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "corazón 7": {
+        "speech": "en el lado externo de la muñeca",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vesícula biliar 18": {
+        "speech": "en la novena vértebra dorsal",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vejiga 21": {
+        "speech": "en la duodécima vértebra dorsal",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vejiga 23": {
+        "speech": "en la segunda vértebra lumbar",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vesícula biliar 20": {
+        "speech": "en la parte superior central de la cabeza",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vesícula biliar 21": {
+        "speech": "En el hombro, justo por encima del pezon, en el punto medio de la línea que conecta la séptima vértebra cervical con el acromion.",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vejiga 12": {
+        "speech": "justo en el medio entre el final del esternón y el ombligo",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vesícula biliar 34": {
+        "speech": "en la parte inferior, cara exterior de la cabeza del peroné",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vejiga 14": {
+        "speech": "entre la séptima vértebra cervical y la primera vértebra torácica",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "vejiga 26": {
+        "speech": "entre la nariz y el labio superior",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      },
+      "bazo 6": {
+        "speech": "EN la cara medial de la pierna, tres chun por encima del maléolo medial, en el border posterior del lado medial de la tibia.",
+        "imagen": {
+          "smallImageUrl": imagenPath + "smallImageTest.png",
+          "largeImageUrl": imagenPath + "largeImageTest.png"
+        }
+      }
+    },
+
+
     "ACUPOINT_DE_DE" : {
 			"Niere ein": "Alles geradeaus.",
 			"Magen 	sechsunddreißig": "Und keine Ahnung, ja voll."
