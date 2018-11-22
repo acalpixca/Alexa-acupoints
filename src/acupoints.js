@@ -340,7 +340,7 @@ module.exports = {
         }
       },
       "bazo 6": {
-        "speech": "EN la cara medial de la pierna, tres chun por encima del maléolo medial, en el border posterior del lado medial de la tibia.",
+        "speech": "En la cara medial de la pierna, tres chun por encima del maléolo medial, en el borde posterior del lado medial de la tibia.",
         "imagen": {
           "smallImageUrl": imagenPath + "smallImageTest.png",
           "largeImageUrl": imagenPath + "largeImageTest.png"
